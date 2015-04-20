@@ -1,0 +1,343 @@
+2015/04/21 01:15:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\AppServ\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\AppServ\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\AppServ\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\AppServ\www\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\AppServ\www\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\AppServ\www\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\AppServ\www\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\AppServ\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\AppServ\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/TourPhuket/index.php/gii/model/index
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/gii/default/index
+---
+2015/04/21 01:15:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\AppServ\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\AppServ\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\AppServ\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\AppServ\www\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\AppServ\www\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\AppServ\www\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\AppServ\www\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\AppServ\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\AppServ\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/TourPhuket/index.php/gii/model/index
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/gii/default/index
+---
+2015/04/21 01:56:06 [error] [exception.CException] exception 'CException' with message 'Customer and its behaviors do not have a method or closure named "ValidatePassword".' in C:\AppServ\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('ValidatePasswor...', Array)
+#1 [internal function]: CActiveRecord->__call('ValidatePasswor...', Array)
+#2 C:\AppServ\www\TourPhuket\protected\components\UserIdentity.php(38): Customer->ValidatePassword('1234')
+#3 C:\AppServ\www\TourPhuket\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\AppServ\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\AppServ\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\AppServ\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\AppServ\www\TourPhuket\protected\controllers\SiteController.php(94): CModel->validate()
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\AppServ\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/TourPhuket/index.php/site/login
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/site/login
+---
+2015/04/21 01:59:59 [error] [exception.CException] exception 'CException' with message 'Property "Customer.password" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\AppServ\www\TourPhuket\protected\models\Customer.php(118): CActiveRecord->__get('password')
+#2 C:\AppServ\www\TourPhuket\protected\components\UserIdentity.php(38): Customer->ValidatePassword('1234')
+#3 C:\AppServ\www\TourPhuket\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\AppServ\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\AppServ\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\AppServ\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\AppServ\www\TourPhuket\protected\controllers\SiteController.php(94): CModel->validate()
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\AppServ\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/TourPhuket/index.php/site/login
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/site/login
+---
+2015/04/21 02:02:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customer/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/customer/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php
+---
+2015/04/21 02:02:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('booking/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/booking/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/customer/admin
+---
+2015/04/21 02:02:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('booking/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/booking/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/booking/admin
+---
+2015/04/21 02:03:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('booking/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/booking/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/booking/admin
+---
+2015/04/21 02:03:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tour/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/tour/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/booking/admin
+---
+2015/04/21 02:03:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customer/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/customer/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/tour/admin
+---
+2015/04/21 02:03:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('booking/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/booking/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/customer/admin
+---
+2015/04/21 02:03:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('promotion/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/promotion/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/booking/admin
+---
+2015/04/21 02:03:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tour/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/tour/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/promotion/admin
+---
+2015/04/21 02:04:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tour/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/tour/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/tour/admin
+---
+2015/04/21 02:04:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('promotion/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/promotion/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/tour/admin
+---
+2015/04/21 02:04:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('booking/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/booking/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/promotion/admin
+---
+2015/04/21 02:04:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\AppServ\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customer/admin')
+#9 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TourPhuket/index.php/customer/admin
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/booking/admin
+---
+2015/04/21 02:09:04 [error] [exception.CException] exception 'CException' with message 'Property "Customer.passwords" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('passwords')
+#1 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('passwords')
+#2 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Customer), 'passwords')
+#3 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Customer), 'passwords', Array)
+#4 C:\AppServ\www\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Customer), 'passwords', Array)
+#5 C:\AppServ\www\TourPhuket\protected\views\customer\_form.php(36): CActiveForm->textField(Object(Customer), 'passwords', Array)
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(126): require('C:\AppServ\www\...')
+#7 C:\AppServ\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#8 C:\AppServ\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#9 C:\AppServ\www\TourPhuket\protected\views\customer\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(126): require('C:\AppServ\www\...')
+#11 C:\AppServ\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#12 C:\AppServ\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#13 C:\AppServ\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\AppServ\www\TourPhuket\protected\controllers\CustomerController.php(79): CController->render('create', Array)
+#15 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(49): CustomerController->actionCreate()
+#16 C:\AppServ\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\AppServ\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\AppServ\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\AppServ\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\AppServ\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\AppServ\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\AppServ\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customer/create')
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\AppServ\www\TourPhuket\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/TourPhuket/index.php/customer/create
+HTTP_REFERER=http://localhost:8089/TourPhuket/index.php/site/login
+---
